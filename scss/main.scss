@@ -1,0 +1,23 @@
+@use 'resets' as *;
+@use 'variables' as *;
+@use 'grid' as *;
+// // @use 'responsive' as *;
+@use 'mixins' as *;
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: $sc-light-gray;
+  font-family: $ff-karla;
+  font-size: $fs-md;
+  font-weight: $fw-regular;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: 1.5rem;
+}

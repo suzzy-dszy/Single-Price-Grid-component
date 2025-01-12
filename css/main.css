@@ -1,0 +1,237 @@
+@charset "UTF-8";
+/* Box sizing reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set default body settings */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased; /* Improve font rendering */
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: inherit; /* Ensure body inherits default font */
+}
+
+/* Remove list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Anchor tag reset */
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* Remove default blockquote styles */
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: "";
+}
+
+/* Remove default table borders */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Image and media reset */
+img,
+picture,
+svg {
+  display: block;
+  max-inline-size: 100%; /* Ensures the width of images doesn't overflow */
+  block-size: auto; /* Adjusts height accordingly */
+}
+
+/* Remove form element borders and background */
+button,
+input,
+textarea,
+select {
+  font: inherit; /* Inherit font settings */
+  background: none;
+  border: none;
+  outline: none;
+  color: inherit;
+}
+
+/* Set default button styles */
+button {
+  cursor: pointer;
+}
+
+/* Remove default animations and transitions */
+* {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* Paragraph and heading word wrapping */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word; /* Ensures text doesn’t overflow its container */
+}
+
+/* Remove all scrollbar styles */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Remove default list item padding */
+li {
+  padding: 0;
+}
+
+/* Remove outline for focused elements */
+:focus {
+  outline: none;
+}
+
+/* Ensure tables don't overflow */
+table {
+  width: 100%;
+}
+
+@font-face {
+  font-family: "Karla", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "intro" "price" "features";
+}
+.grid__intro, .grid__price, .grid__features {
+  padding: 1rem 1.5rem;
+}
+.grid__intro {
+  background-color: #fff;
+  max-width: 23.4375rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+.grid__intro--title {
+  color: hsl(179, 62%, 43%);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+.grid__intro--subtitle {
+  color: hsl(71, 73%, 54%);
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+.grid__intro--text {
+  color: hsl(218, 22%, 67%);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+.grid__price {
+  background-color: hsl(179, 62%, 43%);
+  color: #fff;
+}
+.grid__price--title {
+  font-size: 1.5rem;
+}
+.grid__price--value {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.grid__price--value-text {
+  font-size: 0.75rem;
+  color: rgba(229, 239, 245, 0.35);
+}
+.grid__price--description {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: rgba(229, 239, 245, 0.75);
+}
+.grid__price--btn {
+  display: inline-block;
+  width: 90%;
+  text-align: center;
+  margin-inline: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: hsl(71, 73%, 54%);
+  color: hsl(204, 43%, 93%);
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+.grid__price--btn:hover {
+  background-color: hsl(71, 73%, 54%);
+  color: hsl(179, 62%, 43%);
+}
+.grid__features {
+  background-color: #2fc6c4;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+.grid__features--title {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.grid__features--list {
+  color: rgba(229, 239, 245, 0.75);
+  margin-bottom: 1rem;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: hsl(204, 43%, 93%);
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: 1.5rem;
+}/*# sourceMappingURL=main.css.map */

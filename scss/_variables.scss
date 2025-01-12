@@ -1,0 +1,23 @@
+// font url or font-face
+@font-face {
+  font-family: 'Karla', sans-serif;
+  src: url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+}
+// colors
+$pc-cyan: hsl(179, 62%, 43%);
+$pc-bright-yellow: hsl(71, 73%, 54%);
+
+$sc-light-gray: hsl(204, 43%, 93%);
+$sc-gray-blue: hsl(218, 22%, 67%);
+
+// font family
+$ff-karla: 'Karla', sans-serif;
+
+// Font Size
+$fs-sm: 0.75rem; // 12px
+$fs-md: 1rem; // 16px
+$fs-lg: 2rem; // 32px
+
+// Font Weight
+$fw-regular: 400;
+$fw-bold: 700;
