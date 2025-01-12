@@ -136,19 +136,21 @@ table {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "intro" "price" "features";
+  max-width: 23.4375rem;
 }
 .grid__intro, .grid__price, .grid__features {
   padding: 1rem 1.5rem;
 }
 .grid__intro {
+  grid-area: intro;
   background-color: #fff;
-  max-width: 23.4375rem;
   border-radius: 0.5rem 0.5rem 0 0;
 }
 .grid__intro--title {
   color: hsl(179, 62%, 43%);
   margin-bottom: 1rem;
   font-size: 1.5rem;
+  padding-top: 1rem;
 }
 .grid__intro--subtitle {
   color: hsl(71, 73%, 54%);
@@ -161,11 +163,13 @@ table {
   font-size: 1rem;
 }
 .grid__price {
+  grid-area: price;
   background-color: hsl(179, 62%, 43%);
   color: #fff;
 }
 .grid__price--title {
   font-size: 1.5rem;
+  padding-top: 1rem;
 }
 .grid__price--value {
   display: flex;
@@ -205,10 +209,12 @@ table {
   color: hsl(179, 62%, 43%);
 }
 .grid__features {
+  grid-area: features;
   background-color: #2fc6c4;
   border-radius: 0 0 0.5rem 0.5rem;
 }
 .grid__features--title {
+  padding-top: 1rem;
   color: #fff;
   font-size: 1.5rem;
   margin-bottom: 1rem;
@@ -218,6 +224,20 @@ table {
   margin-bottom: 1rem;
 }
 
+@media screen and (min-width: 64rem) {
+  .grid {
+    max-width: 43.75rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "intro intro" "price features";
+    box-shadow: 5px -5px 50px rgba(0, 0, 0, 0.1);
+  }
+  .grid__price {
+    border-radius: 0 0 0 0.5rem;
+  }
+  .grid__features {
+    border-radius: 0 0 0.5rem 0;
+  }
+}
 body {
   display: flex;
   align-items: center;

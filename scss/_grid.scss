@@ -1,10 +1,12 @@
 @use 'variables' as *;
+@use 'mixins' as *;
 
 // Grid container
 .grid {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: 'intro' 'price' 'features';
+  max-width: 23.4375rem; // 375px
 
   &__intro,
   &__price,
@@ -13,14 +15,15 @@
   }
 
   &__intro {
+    grid-area: intro;
     background-color: #fff;
-    max-width: 23.4375rem; // 375px
     border-radius: 0.5rem 0.5rem 0 0;
 
     &--title {
       color: $pc-cyan;
       margin-bottom: 1rem;
       font-size: 1.5rem;
+      padding-top: 1rem;
     }
 
     &--subtitle {
@@ -37,11 +40,13 @@
   }
 
   &__price {
+    grid-area: price;
     background-color: $pc-cyan;
     color: #fff;
 
     &--title {
       font-size: 1.5rem;
+      padding-top: 1rem;
     }
 
     &--value {
@@ -88,10 +93,12 @@
   }
 
   &__features {
+    grid-area: features;
     background-color: lighten($pc-cyan, 5%);
     border-radius: 0 0 0.5rem 0.5rem;
 
     &--title {
+      padding-top: 1rem;
       color: #fff;
       font-size: 1.5rem;
       margin-bottom: 1rem;
@@ -100,6 +107,25 @@
     &--list {
       color: rgba($sc-light-gray, 0.75);
       margin-bottom: 1rem;
+    }
+  }
+}
+
+@include desktop {
+  .grid {
+    max-width: calc(700 / 16 * 1rem); // 43.75rem
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      'intro intro'
+      'price features';
+    box-shadow: 5px -5px 50px rgba(0, 0, 0, 0.1);
+
+    &__price {
+      border-radius: 0 0 0 0.5rem;
+    }
+
+    &__features {
+      border-radius: 0 0 0.5rem 0;
     }
   }
 }
