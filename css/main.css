@@ -179,7 +179,7 @@ table {
   font-weight: 700;
 }
 .grid__price--value-text {
-  font-size: 0.75rem;
+  font-size: 1rem;
   color: rgba(229, 239, 245, 0.35);
 }
 .grid__price--description {
@@ -232,6 +232,9 @@ table {
     box-shadow: 5px -5px 50px rgba(0, 0, 0, 0.1);
   }
   .grid__price {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     border-radius: 0 0 0 0.5rem;
   }
   .grid__features {

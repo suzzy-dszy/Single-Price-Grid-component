@@ -57,7 +57,7 @@
       font-weight: $fw-bold;
 
       &-text {
-        font-size: 0.75rem;
+        font-size: 1rem;
         color: rgba($sc-light-gray, 0.35);
       }
     }
@@ -121,6 +121,9 @@
     box-shadow: 5px -5px 50px rgba(0, 0, 0, 0.1);
 
     &__price {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
       border-radius: 0 0 0 0.5rem;
     }
 
